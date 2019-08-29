@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('fonts/ProximaNova-Regular.eot');
+	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+		url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ProximaNova-Regular.woff') format('woff'),
+		url('fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Century Expanded';
+	src: url('../fonts/Century Expanded Regular.eot');
+	src: local('Century Expanded Regular'),     local('CenturyExpanded-Regular'),
+		url('../fonts/Century Expanded Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Century Expanded Regular.woff') format('woff'),
+		url('../fonts/Century Expanded Regular.ttf') format('truetype'),
+        url('../fonts/Century Expanded Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Century Expanded';
+	src: url('../fonts/Century Expanded Bold.eot');
+	src: local('Century Expanded Bold'),     local('CenturyExpanded-Bold'),
+		url('../fonts/Century Expanded Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Century Expanded Bold.woff') format('woff'),
+		url('../fonts/Century Expanded Bold.ttf') format('truetype'),
+        url('../fonts/Century Expanded Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bokor';
+	src: url('../fonts/Bokor.eot.eot');
+	src: local('Bokor.eot'),
+		url('../fonts/Bokor.eot.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Bokor.woff') format('woff'),
+		url('../fonts/Bokor.ttf') format('truetype'),
+        url('../fonts/Bokor.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
