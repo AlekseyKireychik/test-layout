@@ -9,6 +9,7 @@ body {
 }
 main {
     overflow: hidden;
+    position: relative;
 }
 
 .header {    
@@ -64,6 +65,7 @@ main {
     margin-bottom: 20px;
     color: #f2f2f2;
 }
+
 .header__nav {
     display: flex;
     flex-basis: auto;
@@ -97,13 +99,15 @@ main {
 .lang__link:focus {
     color: #fff;
 }
+
 .nav {
     display: flex;
     align-items: center;
 }
+
 .nav__link {
     position: relative;
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding: 0px 35px;
     font-family: "Proxima Nova";
     font-size: 14px;
@@ -111,6 +115,19 @@ main {
     text-align: center;
     text-decoration: none;
 }
+
+.nav__link:hover::after {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 2px;
+    transform: translateX(50%);
+    border-bottom: 2px solid #fff;
+
+}
+
 .nav__link.active::after {
     position: absolute;
     top: 20px;
@@ -119,13 +136,15 @@ main {
     display: block;
     width: 2px;
     transform: translateX(50%);
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid #fff;
 } 
+
 .contacts {
     display: flex;
     align-items: center;
     border-right: 1px solid rgba(255, 255, 255, 0.22);
 }
+
 .contacts__list{
     display: flex;
 }
@@ -136,7 +155,7 @@ main {
     line-height: 34px;
     text-align: center;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding-left: 42px;
     padding-right: 42px;
     white-space: nowrap;
@@ -156,6 +175,7 @@ main {
 }
 .header__hamburger {
     display: block;
+    outline: none;
     width: 30px;
     height: 20px;
     padding: 5px 20px 5px 0;
@@ -164,6 +184,7 @@ main {
     position: relative;
     top: 50%;
     left: 40%;
+    cursor: pointer;
     transform: translate(-50%, -50%);
 }
 .header__button {
@@ -171,14 +192,14 @@ main {
     width: 30px;
     height: 2px;    
     top: 50%;
-    background-color: #ffffff;
+    background-color: #fff;
     cursor: pointer;
 }
 
 .header__button::before {
     content: "";
     position: absolute;
-    background-color: #ffffff;
+    background-color: #fff;
     width: 30px;
     height: 2px;
     left: 0;
@@ -189,7 +210,7 @@ main {
 .header__button::after {
     content: "";
     position: absolute;
-    background-color: #ffffff;
+    background-color: #fff;
     width: 30px;
     height: 2px;
     left: 0;
@@ -209,6 +230,37 @@ main {
     transform: rotate(45deg);
 }
 
+#big__menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.big__nav {
+    margin-left: 190px;
+    display: flex;
+    align-items: center;
+}
+
+.big__list {
+    margin-top: 85px;
+}
+
+.big__link {
+    font-family: "Century Expanded", sans-serif;
+    font-size: 60px;
+    line-height: 123px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.big__link:hover {
+    text-decoration: underline;
+}
+
 .slider {
     position: relative;
     height: 100vh;
@@ -221,7 +273,7 @@ main {
 }
 
 .slider__control {
-    z-index: 100;
+    z-index: 101;
     position: absolute;
     bottom: 44px;
     left: 70%;
@@ -261,13 +313,13 @@ main {
     transition: -webkit-clip-path 0s 0.91s;
     transition: clip-path 0s 0.91s;
     transition: clip-path 0s 0.91s, -webkit-clip-path 0s 0.91s;
-    -webkit-clip-path: circle(30px at 120vw 50%);
-            clip-path: circle(30px at 120vw 50%);
+    -webkit-clip-path: circle(0px at 150vw 50%);
+            clip-path: circle(0px at 150vw 50%);
 }
 
 .slide.s--prev {
-    -webkit-clip-path: circle(30px at 30vw 50%);
-            clip-path: circle(30px at 30vw 50%);
+    -webkit-clip-path: circle(0px at 30vw 50%);
+            clip-path: circle(0px at 30vw 50%);
 }
 
 .slide.s--active {
@@ -390,7 +442,7 @@ main {
     background-color: rgba(26, 12, 12, 0.64);
     position: absolute;
     bottom: 0%;
-    z-index: 99;
+    z-index: 100;
     width: 100%;
 }
 .footer__container {
@@ -447,11 +499,11 @@ main {
 .footer__barnumber {
     height: 2px;
     width: 70%;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .footer__phone {    
-    background-color: #ffffff;
+    background-color: #fff;
     min-width: 384px;
     position: relative;
     padding-top: 40px;
@@ -475,6 +527,14 @@ main {
 }
   
 @media screen and (max-width: 1600px) {
+    .top {
+        top: 104px;
+    }
+
+    .header__logo {
+        padding: 29px 35px 45px 42px;
+    }
+
     .nav__link {
         padding: 0px 25px;
     }
@@ -506,7 +566,7 @@ main {
     }
 
     .bottom {
-        top: 56vh;
+        top: 60vh;
     }
     .bottom__one {
         align-self: flex-start;
@@ -519,12 +579,18 @@ main {
 
     .bottom__text {
         font-size: 16px;
-        line-height: 28px;
+        line-height: 24px;
         margin-right: 80px;
     }
-     
+    
+    .footer__container{
+        display: flex;
+        align-items: center;
+    }
+
     .footer__list{
-        margin-top: 20px; 
+        margin-top: 0; 
+        margin-bottom: 0;
     }
 
     .footer__link {
@@ -533,12 +599,12 @@ main {
 
     .footer__pagination {
         margin-left: -100px;
-        padding-top: 45px;
+        padding-top: 35px;
     }
 
     .slider__control {
         left: 64%;
-        bottom: 25px;
+        bottom: 19px;
     }
 
     .slider__control--right {
@@ -547,8 +613,18 @@ main {
 
     .footer__phone {
         min-width: 300px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
         
 }
+@media screen and (max-width: 1200px) {
+    .nav{
+        display: none;
+    }
+
+    .bottom {
+        flex-direction: column;
+    }
+}
+
